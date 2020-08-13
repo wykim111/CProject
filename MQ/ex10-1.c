@@ -17,7 +17,7 @@ int main()
 	int msgid;
 	struct mymsgbuf mesg;
 
-	key=ftok("keyfile",1);
+	key=ftok("/home/wykim/IPC/MQ/ex10-1.c",1);
 	msgid = msgget(key,IPC_CREAT|0644);
 
 	if(msgid == -1)

@@ -13,7 +13,7 @@ int main()
 	key_t key;
 	int msgid, len;
 
-	key = ftok("keyfile",1);
+	key = ftok("/home/wykim/IPC/MQ/ex10-1.c",1);
 
 	if((msgid=msgget(key,0)) < 0)
 	{
