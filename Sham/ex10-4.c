@@ -10,7 +10,7 @@ int main()
 	key_t key;
 	int shmid;
 
-	key=ftok("shmfile",1);
+	key=ftok("home/ubuntu/IPC/Sham/ex10-4.c",1);
 
 	shmid=shmget(key,1024,IPC_CREAT|0644);
 
