@@ -1,0 +1,2 @@
+sudo apt-get install glib-2.0
+sudo apt-get install libdbus-1-dev
