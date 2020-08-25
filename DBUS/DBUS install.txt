@@ -21,3 +21,6 @@ sudo apt-get install libdbus-1-dev
 
 출처 https://m.blog.naver.com/PostView.nhn?blogId=pogen27&logNo=50139204287&proxyReferer=https:%2F%2Fwww.google.com%2F
 
+===========================================================================================================================
+
+출처 : https://www.softprayog.in/programming/d-bus-tutorial
