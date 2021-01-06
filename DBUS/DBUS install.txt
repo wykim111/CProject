@@ -1,0 +1,26 @@
+sudo apt-get install glib-2.0
+sudo apt-get install libdbus-1-dev
+
+======================================================
+
+1. dbus라이브러리 설치
+  1) sudo apt-get install dbus-1-dev   (요거만 설치하면 됩니다.
+
+2. 인클루드 파일 위치 조정 (설치시 경로 설정에 문제가 있어 개발시 번거로움을 없애기 위해..)
+  1) sudo cp -r /usr/include/dbus-1.0/dbus /usr/include
+  2) sudo cp /usr/lib/dbus-1.0/include/dbus/dbus-arch-deps.h /usr/include/dbus/
+ 
+3. dbus.h를 인클루드하여 구현 
+   1) 샘플코드는 listener와 sender가 있으며 각각 다른 터미널에서 listener 먼저 실행하시면 됩니다.
+    listener가 루프를 돌면서 대기하다가 sender의 메시지와 함수콜에 응답합니다.
+   
+4. 컴파일시 dbus 라이브러리 참조
+  1)샘플코드 컴파일 :  gcc -o output_file source_file -ldbus-1
+  2)자가구현시 Makefile에 -ldbus-1 추가하면 됩니다.
+
+
+출처 https://m.blog.naver.com/PostView.nhn?blogId=pogen27&logNo=50139204287&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+===========================================================================================================================
+
+출처 : https://www.softprayog.in/programming/d-bus-tutorial
