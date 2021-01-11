@@ -85,6 +85,56 @@ int removeNode(int rmData)
     return 0;
 }
 
+int searchNode(int target)
+{
+    stNode* curNode = head->next;
+
+    if(curNode == NULL)
+    {
+        printf("No Target %d\n",target);
+        return -1;
+    }
+
+    while(curNode != NULL)
+    {
+        if(curNode->data == target)
+        {
+            printf("success target :%d\n",target);
+            return 1;
+
+        }
+
+        curNode = curNode->next;
+
+    }
+
+    printf("fail target:%d\n",target);
+
+
+    return 0;
+}
+
+
+void deleteMem(stNode* delNode)
+{
+    stNode* curNode = delNode;
+
+    if(delNode == NULL)
+    {
+        printf("empty Node\n");
+
+        return;
+    }
+
+
+    while(curNode != NULL)
+    {
+        delNode = curNode;
+        curNode = curNode->next;
+        free(delNode);
+    }
+
+}
 
 int main()
 {
@@ -108,7 +158,12 @@ int main()
     //제거할 데이터
     removeNode(4);
 
+    searchNode(9);
+
     iterList();
+
+
+    deleteMem(head);
 
     return 0;
 }
